@@ -12,7 +12,3 @@ def home(request):
         'blogs': blogs,
         'testimonials': testimonials
     })
-CTA Button:
-<a href="https://lifewave.com/mikendab" class="btn btn-primary btn-lg">
-Order Lifewave X39
-</a>
