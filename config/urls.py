@@ -24,4 +24,7 @@ urlpatterns = [
     path('testimonials/', include('testimonials.urls')),
     path('accounts/', include('django.contrib.auth.urls')),
 ]
+# config/urls.py
+path('accounts/', include('accounts.urls')),
+path('accounts/', include('django.contrib.auth.urls')),
 
