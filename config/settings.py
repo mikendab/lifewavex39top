@@ -47,6 +47,9 @@ INSTALLED_APPS = [
     'blog',
     'testimonials',
     'accounts',
+    'django.contrib.staticfiles',
+    'cloudinary_storage',
+    'cloudinary',
 ]
 
 CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
@@ -61,6 +64,7 @@ STATIC_ROOT = BASE_DIR / 'staticfiles'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -73,6 +77,7 @@ ROOT_URLCONF = 'config.urls'
 
 TEMPLATES = [
     {
+        'DIRS': [TEMPLATES_DIR],
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [],
         'APP_DIRS': True,
@@ -138,6 +143,8 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/6.0/howto/static-files/
 
 STATIC_URL = 'static/'
+STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static'),]
+TEMPLATES_DIRS = [os.path.join(BASE_DIR, 'templates'),]
 # Cloudinary setup
 CLOUDINARY_STORAGE = {
     'CLOUD_NAME': 'Michael-Awanayah',
