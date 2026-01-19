@@ -22,7 +22,7 @@ if os.path.isfile('env.py'):
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/6.0/howto/deployment/checklist/
-DEBUG = True
+DEBUG = False
 # SECURITY WARNING: keep the secret key used in production secret! kept in env.py
 SECRET_KEY = os.environ.get('Ndab2771#$@!%D*D9VZ6G^3L0X5WQ8YFJH2K4M1P0A7S8E9T')
 
@@ -48,7 +48,6 @@ INSTALLED_APPS = [
     'blog',
     'testimonials',
     'accounts',
-    'django.contrib.staticfiles',
     'cloudinary_storage',
     'cloudinary',
 ]
