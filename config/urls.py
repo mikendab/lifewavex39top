@@ -28,3 +28,9 @@ urlpatterns = [
 path('accounts/', include('accounts.urls')),
 path('accounts/', include('django.contrib.auth.urls')),
 
+from django.contrib.auth.views import LogoutView
+path(
+    'accounts/logout/',
+    LogoutView.as_view(),
+    name='logout'
+),
