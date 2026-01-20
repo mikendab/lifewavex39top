@@ -24,7 +24,7 @@ if os.path.isfile('env.py'):
 # See https://docs.djangoproject.com/en/6.0/howto/deployment/checklist/
 DEBUG = False
 # SECURITY WARNING: keep the secret key used in production secret! kept in env.py
-SECRET_KEY = os.environ.get('Ndab2771#$@!%D*D9VZ6G^3L0X5WQ8YFJH2K4M1P0A7S8E9T')
+SECRET_KEY = os.environ.get('SECRET_KEY', 'dev-secret-key-change-me')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 
@@ -103,14 +103,11 @@ WSGI_APPLICATION = 'config.wsgi.application'
 #       'NAME': BASE_DIR / 'db.sqlite3',
 #    }
 #}
-import dj_database_url
-import os
-
 DATABASES = {
     'default': dj_database_url.config(
-        default=os.environ.get('DATABASE_URL'),
+        default=f"sqlite:///{BASE_DIR / 'db.sqlite3'}",
         conn_max_age=600,
-        ssl_require=True
+        ssl_require=True,
     )
 }
 
