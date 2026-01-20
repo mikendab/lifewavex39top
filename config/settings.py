@@ -78,9 +78,8 @@ ROOT_URLCONF = 'config.urls'
 
 TEMPLATES = [
     {
-        'DIRS': [TEMPLATES_DIR],
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [TEMPLATES_DIR],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -105,16 +104,13 @@ WSGI_APPLICATION = 'config.wsgi.application'
 #    }
 #}
 
-if os.environ.get('DATABASE_URL'):
-    DATABASES = {
-        'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
-    }
-else:
-    DATABASES = {
-        'default': {
-            'ENGINE': 'dj_database_url.config(conn_max_age=600, ssl_require=True)'
-        }
-    }
+DATABASES = {
+    'default': dj_database_url.config(
+        default=f"sqlite:///{BASE_DIR / 'db.sqlite3'}",
+        conn_max_age=600,
+        ssl_require=True,
+    )
+}
 
 # Password validation
 # https://docs.djangoproject.com/en/6.0/ref/settings/#auth-password-validators
@@ -151,9 +147,8 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/6.0/howto/static-files/
 
 STATIC_URL = '/static/'
-STATIC_ROOT = BASE_DIR
-STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static'),]
-TEMPLATES_DIRS = [os.path.join(BASE_DIR, 'templates'),]
+STATIC_ROOT = BASE_DIR / 'staticfiles'
+STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
 # Cloudinary setup
 CLOUDINARY_STORAGE = {
     'CLOUD_NAME': 'Michael-Awanayah',
