@@ -8,6 +8,11 @@ from .forms import TestimonialForm
 @login_required
 def testimonial_list(request):
     testimonials = Testimonial.objects.filter(approved=True)
+    user_testimonials = Testimonial.objects.filter(user=request.user)
+    
+    if user_testimonials.exists():
+        messages.info(request, f"You have {user_testimonials.count()} testimonial(s).")
+    
     return render(request, 'testimonials/list.html', {'testimonials': testimonials})
 
 
@@ -21,7 +26,7 @@ def testimonial_create(request):
 
         messages.success(
             request,
-            " Your testimonial has been submitted and is awaiting approval."
+            "Your testimonial has been submitted and is awaiting approval."
         )
 
         return redirect('testimonial_list')
@@ -39,7 +44,7 @@ def testimonial_edit(request, pk):
 
         messages.success(
             request,
-            "✏️ Your testimonial has been updated successfully."
+            "Your testimonial has been updated successfully."
         )
 
         return redirect('testimonial_list')
@@ -54,7 +59,7 @@ def testimonial_delete(request, pk):
 
     messages.warning(
         request,
-        " Your testimonial has been deleted."
+        "Your testimonial has been deleted."
     )
 
     return redirect('testimonial_list')
