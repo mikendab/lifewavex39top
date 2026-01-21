@@ -35,7 +35,15 @@
                             <div class="card-body">
                                 <blockquote class="blockquote">
                                     <p class="mb-0">{{ testimonial.content }}</p>
-                                    <footer class="blockquote-footer">{{ testimonial.user.username }} - Rating: {{ testimonial.rating }}/5</footer>
+                                    <footer class="blockquote-footer">
+    {% if testimonial.user %}
+        {{ testimonial.user.username }}
+    {% else %}
+        Anonymous
+    {% endif %}
+    - Rating: {{ testimonial.rating }}/5
+</footer>
+
                                 </blockquote>
                             </div>
                         </div>
