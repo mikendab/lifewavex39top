@@ -118,6 +118,21 @@ DATABASES = {
     'default': db_config
 }
 
+# Production-only security hardening
+if not DEBUG:
+    # Trust Heroku's proxy to report HTTPS correctly
+    SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+
+    # Enforce HTTPS and secure cookies
+    SECURE_SSL_REDIRECT = True
+    SESSION_COOKIE_SECURE = True
+    CSRF_COOKIE_SECURE = True
+
+    # Enable HSTS for one year (includes subdomains, preload)
+    SECURE_HSTS_SECONDS = 31536000
+    SECURE_HSTS_INCLUDE_SUBDOMAINS = True
+    SECURE_HSTS_PRELOAD = True
+
 
 # Password validation
 # https://docs.djangoproject.com/en/6.0/ref/settings/#auth-password-validators
