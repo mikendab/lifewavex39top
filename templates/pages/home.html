@@ -3,7 +3,13 @@
 {% block content %}
 <div class="container mt-5">
     <h1>Welcome to LifeWave</h1>
-    <p> As we age , the body's ability to regenerate and repair itself diminishes, leading to various health challenges. LifeWave is dedicated to promoting wellness and vitality through innovative solutions.</p>
+    <p>
+        As we age, the body's ability to regenerate and repair itself diminishes,
+        leading to various health challenges. LifeWave is dedicated to promoting
+        wellness and vitality through innovative solutions.
+    </p>
+
+    <!-- Latest Blog Posts -->
     <section class="mt-5">
         <h2>Latest Blog Posts</h2>
         {% if blogs %}
@@ -14,7 +20,8 @@
                             <div class="card-body">
                                 <h5 class="card-title">{{ blog.title }}</h5>
                                 <p class="card-text">{{ blog.content|truncatewords:20 }}</p>
-                                <a href="{% url 'blog_detail' blog.id %}" class="btn btn-primary">Read More</a>
+                                <!-- Safe blog link -->
+                                <a href="/blog/" class="btn btn-primary">Read More</a>
                             </div>
                         </div>
                     </div>
@@ -25,6 +32,7 @@
         {% endif %}
     </section>
 
+    <!-- Testimonials -->
     <section class="mt-5">
         <h2>Testimonials</h2>
         {% if testimonials %}
@@ -36,14 +44,13 @@
                                 <blockquote class="blockquote">
                                     <p class="mb-0">{{ testimonial.content }}</p>
                                     <footer class="blockquote-footer">
-    {% if testimonial.user %}
-        {{ testimonial.user.username }}
-    {% else %}
-        Anonymous
-    {% endif %}
-    - Rating: {{ testimonial.rating }}/5
-</footer>
-
+                                        {% if testimonial.user %}
+                                            {{ testimonial.user.username }}
+                                        {% else %}
+                                            Anonymous
+                                        {% endif %}
+                                        - Rating: {{ testimonial.rating }}/5
+                                    </footer>
                                 </blockquote>
                             </div>
                         </div>
@@ -51,8 +58,10 @@
                 {% endfor %}
             </div>
         {% else %}
-            <p>No testimonials yet. <a href="{% url 'testimonial_create' %}">Be the first!</a></p>
+            <!-- Safe testimonial link -->
+            <p>No testimonials yet. <a href="/testimonials/">Be the first!</a></p>
         {% endif %}
     </section>
 </div>
 {% endblock %}
+
