@@ -21,7 +21,7 @@
                                 <h5 class="card-title">{{ blog.title }}</h5>
                                 <p class="card-text">{{ blog.content|truncatewords:20 }}</p>
                                 <!-- Safe blog link -->
-                                <a href="/blog/" class="btn btn-primary">Read More</a>
+                                <a href="/blog/{{ blog.pk }}" class="btn btn-primary">Read More</a>
                             </div>
                         </div>
                     </div>
