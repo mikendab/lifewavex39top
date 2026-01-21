@@ -13,7 +13,7 @@ if blog_home_view and hasattr(blog_home_view, 'as_view'):
 else:
     blog_home_view = getattr(views, 'home', _fallback)
 
-
 urlpatterns = [
     path('', blog_home_view, name='blog_list'),
+    path('<int:pk>/', views.blog_detail, name='blog_detail'),
 ]
