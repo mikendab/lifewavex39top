@@ -105,12 +105,17 @@ WSGI_APPLICATION = 'config.wsgi.application'
 #}
 import dj_database_url
 import os
+db_config = dj_database_url.config(
+    default=os.environ.get('DATABASE_URL'),
+    conn_max_age=60,
+    ssl_require=True,
+)
+
+# Ensure resilient DB connections on platforms that close idle SSL sessions
+db_config['CONN_HEALTH_CHECKS'] = True
+
 DATABASES = {
-    'default': dj_database_url.config(
-        default=os.environ.get('DATABASE_URL'),
-        conn_max_age=600,
-        ssl_require=True 
-     )
+    'default': db_config
 }
 
 
