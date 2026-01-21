@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+
+{% block title %}{{ post.title }}{% endblock %}
+
+{% block content %}
+<div class="container mt-5">
+    <article>
+        <div class="mb-4">
+            <h1 class="display-4">{{ post.title }}</h1>
+            <div class="text-muted mb-3">
+                <small>
+                    By <strong>{{ post.author.username }}</strong> | 
+                    {{ post.created|date:"F d, Y" }}
+                </small>
+            </div>
+        </div>
+
+        {% if post.image %}
+            <div class="mb-4">
+                <img src="{{ post.image.url }}" alt="{{ post.title }}" class="img-fluid rounded shadow">
+            </div>
+        {% endif %}
+
+        <div class="content">
+            {{ post.content|safe|linebreaks }}
+        </div>
+
+        <hr class="my-5">
+
+        <div class="d-flex justify-content-between">
+            <a href="{% url 'blog_list' %}" class="btn btn-secondary">← Back to Blog</a>
+            {% if request.user == post.author or request.user.is_staff %}
+                <div>
+                    <a href="{% url 'blog_edit' post.pk %}" class="btn btn-outline-primary">Edit</a>
+                    <a href="{% url 'blog_delete' post.pk %}" class="btn btn-outline-danger" onclick="return confirm('Are you sure you want to delete this post?')">Delete</a>
+                </div>
+            {% endif %}
+        </div>
+    </article>
+</div>
+{% endblock content %}

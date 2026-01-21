@@ -7,11 +7,19 @@ from .forms import TestimonialForm
 
 @login_required
 def testimonial_list(request):
-    testimonials = Testimonial.objects.filter(approved=True)
+    # Show approved testimonials from all users, plus user's own testimonials (even if not approved)
+    approved_testimonials = Testimonial.objects.filter(approved=True).exclude(user=request.user)
     user_testimonials = Testimonial.objects.filter(user=request.user)
     
+    # Combine both querysets
+    testimonials = (approved_testimonials | user_testimonials).distinct().order_by('-created')
+    
     if user_testimonials.exists():
-        messages.info(request, f"You have {user_testimonials.count()} testimonial(s).")
+        pending_count = user_testimonials.filter(approved=False).count()
+        if pending_count > 0:
+            messages.info(request, f"You have {user_testimonials.count()} testimonial(s) ({pending_count} pending approval).")
+        else:
+            messages.info(request, f"You have {user_testimonials.count()} testimonial(s).")
     
     return render(request, 'testimonials/list.html', {'testimonials': testimonials})
 
