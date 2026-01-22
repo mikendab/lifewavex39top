@@ -23,7 +23,7 @@
                             </h5>
                             <span class="badge bg-warning text-dark">{{ testimonial.rating }}/5 ⭐</span>
                         </div>
-                        <p class="card-text">{{ testimonial.content }}</p>
+                        <p class="card-text mb-3">{{ testimonial.content }}</p>
                         <small class="text-muted">{{ testimonial.created|date:"M d, Y" }}</small>
                         
                         {% if testimonial.user == request.user %}
