@@ -261,6 +261,17 @@ This project significantly improved my understanding of **full-stack Django deve
 
 Each challenge was overcome through structured debugging, documentation review, and iterative testing.
 
+### Reflections on Use of AI
+
+* AI tools were used to:
+
+* Diagnose and fix deployment issues (HTTP 500 errors)
+
+* Debug Django configuration problems
+
+* Generate future feature ideas
+
+* Improve understanding of Django architecture
 ### Outcome
 
 The final application meets the project requirements, follows industry best practices, and provides a solid foundation for future expansion.
