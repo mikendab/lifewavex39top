@@ -44,6 +44,10 @@ Administrators can manage content, moderate testimonials, and maintain platform 
 * Trust-building through testimonials
 * Simple authentication and interaction
 * Mobile-first responsive design
+* Responsiveness - laptop, tablet and mobile
+![Responsiveness_laptop](screenshots/responsiveness_laptop.png)
+![Responsiveness_Ipad](screenshots/responsiveness_ipad_pro.png)
+![Responsiveness_mobile](screenshots/responsiveness_iphone_pro_max.png)
 
 ---
 
@@ -67,6 +71,7 @@ Administrators can manage content, moderate testimonials, and maintain platform 
 ---
 
 ## Screenshots
+* project board user stories and mpping in github
 ![Project board User Stories](screenshots/project_board_user_stories.png)
 
 
@@ -75,6 +80,7 @@ Administrators can manage content, moderate testimonials, and maintain platform 
 
 ## Database Design (ERD)
 ![ERD](screenshots/erd.png)
+
 
 
 
@@ -145,12 +151,14 @@ Accessibility considerations were integrated throughout development.
 * HTML validated via W3C Validator using deployed URLs
 * Manual keyboard navigation testing
 * Cross-browser testing
+* html w3c Validation
 ![html w3c validation](screenshots/html_w3c_validation.png)
 
 
 ---
 
 ## Testing
+* Lighthouse testing for both laptop and mobile
 ![Lighthouse_Laptop](screenshots/lighthouse_test_laptop.png)
 ![Lighthouse_mobile](screenshots/lighthouse_test_mobile.png)
 
