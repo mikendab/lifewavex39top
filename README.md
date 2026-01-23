@@ -67,6 +67,7 @@ Administrators can manage content, moderate testimonials, and maintain platform 
 ---
 
 ## Screenshots
+![Project board User Stories](screenshots/project_board_user_stories.png)
 
 
 
