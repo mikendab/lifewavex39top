@@ -99,7 +99,7 @@ Wireframes were created during the planning phase to establish layout and naviga
 * Python
 * HTML5
 * CSS3
-* JavaScript
+
 
 ### Frameworks & Libraries
 
@@ -188,7 +188,7 @@ The project was deployed to **Heroku** using the following steps:
 ### Steps
 
 ```bash
-git clone https://github.com/yourusername/your-repo-name.git
+git clone https://github.com/mikendab/lifewavex39top.git
 cd your-repo-name
 python -m venv venv
 source venv/bin/activate  # Windows: venv\Scripts\activate
@@ -200,8 +200,8 @@ python manage.py runserver
 Create an `env.py` file with:
 
 ```python
-SECRET_KEY='your-secret-key'
-DATABASE_URL='your-database-url'
+SECRET_KEY= available if required
+DATABASE_URL= availble if required
 ```
 
 ---
@@ -223,7 +223,8 @@ DATABASE_URL='your-database-url'
 ---
 
 ## Credits
-
+Copilot
+Code Institute
 ### Content
 
 * Educational content adapted for demonstration purposes
