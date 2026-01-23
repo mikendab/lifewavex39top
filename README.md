@@ -149,6 +149,9 @@ Accessibility considerations were integrated throughout development.
 ---
 
 ## Testing
+![Lighthouse_Laptop](screenshots/lighthouse_test_laptop.png)
+![Lighthouse_mobile](screenshots/lighthouse_test_mobile.png)
+
 
 ### Manual Testing
 
