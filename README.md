@@ -93,12 +93,12 @@ The application uses a **relational PostgreSQL database** designed using Django 
 ---
 
 ## Wireframes
-![Laptop_Home](screenshots/wireframe_laptop_home)
-![Lapton_Login](screenshots/wireframe_lapton_login)
-![Laptop-Register](screenshots/wireframe_lapton_register)
-![Mobile_Home](screenshots/wireframe_mobile_home)
-![Mobile_Login](screenshots/wireframe_mobile_login)
-![Mobile_Register](screenshots/wireframe_mobile_register)
+![Laptop_Home](screenshots/wireframe1_laptop_home.png)
+![Lapton_Login](screenshots/wireframe2_laptop_login.png)
+![Laptop-Register](screenshots/wireframe3_laptop_register.png)
+![Mobile_Home](screenshots/wireframe4_mobile_home.png)
+![Mobile_Login](screenshots/wireframe5_mobile_login.png)
+![Mobile_Register](screenshots/wireframe6_mobile_register.png)
 
 
 
