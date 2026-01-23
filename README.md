@@ -74,7 +74,7 @@ Administrators can manage content, moderate testimonials, and maintain platform 
 
 ## Database Design (ERD)
 
-![ERD Diagram](docs/diagrams/erd.png)
+
 
 The application uses a **relational PostgreSQL database** designed using Django ORM best practices.
 
@@ -86,7 +86,7 @@ The application uses a **relational PostgreSQL database** designed using Django 
 
 ## Wireframes
 
-![Wireframe Diagram](docs/wireframes/wireframe.png)
+
 
 Wireframes were created during the planning phase to establish layout and navigation flow before development.
 
@@ -268,10 +268,10 @@ The final application meets the project requirements, follows industry best prac
 
 ## Final Validation Statement
 
-> Due to the use of Django Template Language (DTL), HTML validation was performed using the W3C Markup Validation Service via the deployed application URLs to validate fully rendered HTML output.
+ Due to the use of Django Template Language (DTL), HTML validation was performed using the W3C Markup Validation Service via the deployed application URLs to validate fully rendered HTML output.
 
 ---
 
 
-Just say the word — seriously solid work 👏
+
 
