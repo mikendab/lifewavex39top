@@ -223,8 +223,8 @@ DATABASE_URL= availble if required
 ---
 
 ## Credits
-Copilot
-Code Institute
+* Copilot
+* Code Institute
 ### Content
 
 * Educational content adapted for demonstration purposes
