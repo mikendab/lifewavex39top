@@ -272,6 +272,8 @@ Each challenge was overcome through structured debugging, documentation review, 
 * Generate future feature ideas
 
 * Improve understanding of Django architecture
+* .  Copilot helped identfied a whole suite of tests that could be carried on my project. However I only asked Copilot to focus on testimonais and CRUD functionality that has complex operations
+*  AI also helped with efficiency and productivity as I was able to catch up with the work, since I wqs ill for two weeks with covid
 ### Outcome
 
 The final application meets the project requirements, follows industry best practices, and provides a solid foundation for future expansion.
