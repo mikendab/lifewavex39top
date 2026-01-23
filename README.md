@@ -73,6 +73,7 @@ Administrators can manage content, moderate testimonials, and maintain platform 
 ---
 
 ## Database Design (ERD)
+![ERD](screenshots/erd.png)
 
 
 
