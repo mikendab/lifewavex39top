@@ -145,6 +145,8 @@ Accessibility considerations were integrated throughout development.
 * HTML validated via W3C Validator using deployed URLs
 * Manual keyboard navigation testing
 * Cross-browser testing
+![html w3c validation](screenshots/html_w3c_validation.png)
+
 
 ---
 
