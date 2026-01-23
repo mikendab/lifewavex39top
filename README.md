@@ -86,6 +86,12 @@ The application uses a **relational PostgreSQL database** designed using Django 
 ---
 
 ## Wireframes
+![Laptop_Home](screenshots/wireframe_laptop_home)
+![Lapton_Login](screenshots/wireframe_lapton_login)
+![Laptop-Register](screenshots/wireframe_lapton_register)
+![Mobile_Home](screenshots/wireframe_mobile_home)
+![Mobile_Login](screenshots/wireframe_mobile_login)
+![Mobile_Register](screenshots/wireframe_mobile_register)
 
 
 
