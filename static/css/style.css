@@ -96,6 +96,117 @@
   box-shadow: 0 10px 24px rgba(0, 0, 0, 0.35);
 }
 
+.home-shell {
+  background: linear-gradient(180deg, #eef3f8 0%, #f8fbff 100%);
+}
+
+.home-intro-wrap {
+  margin-top: -72px;
+  position: relative;
+  z-index: 2;
+}
+
+.home-intro-card {
+  background: #ffffff;
+  border-radius: 1rem;
+  padding: 2rem;
+  box-shadow: 0 16px 34px rgba(14, 35, 57, 0.14);
+}
+
+.home-title {
+  font-size: 2.4rem;
+  line-height: 1.15;
+  margin: 0;
+  color: #1c2733;
+}
+
+.home-lead {
+  margin-top: 1rem;
+  max-width: 65ch;
+  font-size: 1.1rem;
+  color: #33475b;
+}
+
+.home-duo-card {
+  margin-top: 1.35rem;
+  background: #f8fbff;
+  border: 1px solid #dde8f5;
+  border-radius: 0.9rem;
+  padding: 0.95rem;
+}
+
+.home-duo-col {
+  height: 100%;
+  border-radius: 0.75rem;
+  padding: 1rem;
+}
+
+.home-duo-problem {
+  background: #fff3f3;
+  border: 1px solid #ffd9d9;
+}
+
+.home-duo-benefit {
+  background: #f2fbf5;
+  border: 1px solid #ccefd9;
+}
+
+.home-duo-title {
+  font-size: 1.15rem;
+  margin: 0 0 0.65rem;
+  color: #1f2a36;
+}
+
+.home-duo-list {
+  margin: 0;
+  padding-left: 1.1rem;
+  color: #30485d;
+}
+
+.home-duo-list li {
+  margin-bottom: 0.45rem;
+}
+
+.home-cta-copy {
+  margin-top: 1rem;
+  margin-bottom: 0.2rem;
+  font-weight: 600;
+  color: #1f3142;
+}
+
+.home-order-cta {
+  background: #0b63e5;
+  color: #fff;
+  font-weight: 700;
+  font-size: 1.15rem;
+  padding: 0.85rem 1.8rem;
+  border-radius: 0.7rem;
+  box-shadow: 0 12px 20px rgba(11, 99, 229, 0.28);
+}
+
+.home-order-cta:hover,
+.home-order-cta:focus {
+  background: #0854c0;
+  color: #fff;
+  transform: translateY(-1px);
+}
+
+.home-trust-points {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+}
+
+.home-pill {
+  background: #edf4ff;
+  color: #0a4ca4;
+  border: 1px solid #d2e4ff;
+  border-radius: 999px;
+  padding: 0.35rem 0.7rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
 @media (min-width: 768px) {
   .hero-image {
     height: 420px;
@@ -123,6 +234,10 @@
   .hero-cta {
     margin-top: 0;
   }
+
+  .home-intro-card {
+    padding: 2.4rem 2.8rem;
+  }
 }
 
 @media (min-width: 1200px) {
@@ -132,5 +247,32 @@
 
   .hero-title {
     font-size: 3rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .home-intro-wrap {
+    margin-top: -36px;
+  }
+
+  .home-intro-card {
+    padding: 1.35rem;
+  }
+
+  .home-title {
+    font-size: 1.9rem;
+  }
+
+  .home-lead {
+    font-size: 1rem;
+  }
+
+  .home-order-cta {
+    width: 100%;
+    text-align: center;
+  }
+
+  .home-duo-card {
+    padding: 0.75rem;
   }
 }
