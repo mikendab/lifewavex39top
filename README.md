@@ -1,9 +1,6 @@
-# lifewavex39top
-Purpose - django full stack project to market and distribute the lifewavex39 an innovative stem cell product for wellbeing.
-
----
-
 # LifeWave X39 Wellness Platform
+
+> Django full stack project to market and distribute the lifewavex39 an innovative stem cell product for wellbeing.
 
 ![Python](https://img.shields.io/badge/Python-3.12-blue?logo=python)
 ![Django](https://img.shields.io/badge/Django-6.0-darkgreen?logo=django)
@@ -60,6 +57,9 @@ Administrators can manage content, moderate testimonials, and maintain platform 
 * Testimonial submission with admin approval
 * Responsive navigation bar
 * Admin dashboard for content management
+* Hero image banner on every page (X39 product photo)
+* Education page with intro video and four visual guide sections
+* Responsive hero section with call-to-action buttons
 
 ### Future Features
 
@@ -71,18 +71,16 @@ Administrators can manage content, moderate testimonials, and maintain platform 
 ---
 
 ## Screenshots
-* project board user stories and mpping in github
+
+* project board user stories and mapping in github
+
 ![Project board User Stories](screenshots/project_board_user_stories.png)
-
-
 
 ---
 
 ## Database Design (ERD)
+
 ![ERD](screenshots/erd.png)
-
-
-
 
 The application uses a **relational PostgreSQL database** designed using Django ORM best practices.
 
@@ -93,14 +91,13 @@ The application uses a **relational PostgreSQL database** designed using Django 
 ---
 
 ## Wireframes
+
 ![Laptop_Home](screenshots/wireframe1_laptop_home.png)
 ![Lapton_Login](screenshots/wireframe2_laptop_login.png)
 ![Laptop-Register](screenshots/wireframe3_laptop_register.png)
 ![Mobile_Home](screenshots/wireframe4_mobile_home.png)
 ![Mobile_Login](screenshots/wireframe5_mobile_login.png)
 ![Mobile_Register](screenshots/wireframe6_mobile_register.png)
-
-
 
 Wireframes were created during the planning phase to establish layout and navigation flow before development.
 
@@ -113,7 +110,6 @@ Wireframes were created during the planning phase to establish layout and naviga
 * Python
 * HTML5
 * CSS3
-
 
 ### Frameworks & Libraries
 
@@ -146,22 +142,23 @@ Accessibility considerations were integrated throughout development.
 * Adequate color contrast
 * Responsive design
 
-### Validation
+### Code Validation
 
 * HTML validated via W3C Validator using deployed URLs
 * Manual keyboard navigation testing
 * Cross-browser testing
 * html w3c Validation
-![html w3c validation](screenshots/html_w3c_validation.png)
 
+![html w3c validation](screenshots/html_w3c_validation.png)
 
 ---
 
 ## Testing
+
 * Lighthouse testing for both laptop and mobile
+
 ![Lighthouse_Laptop](screenshots/lighthouse_test_laptop.png)
 ![Lighthouse_mobile](screenshots/lighthouse_test_mobile.png)
-
 
 ### Manual Testing
 
@@ -244,15 +241,31 @@ DATABASE_URL= availble if required
 ---
 
 ## Credits
+
 * Copilot
 * Code Institute
+
 ### Content
 
 * Educational content adapted for demonstration purposes
 
 ### Media
 
-* Images hosted via Cloudinary
+#### Images (`static/images/`)
+
+| File | Usage |
+| ---- | ----- |
+| `X39 Product.jpg` | Hero banner displayed on every page |
+| `benefitsofx39.png` | Education page — Benefits of X39 section |
+| `howtwearthex39.png` | Education page — How to Wear the X39 section |
+| `howx39works.png` | Education page — How X39 Works section |
+| `whythex39stemcellpatch.png` | Education page — Why the X39 Stem Cell Patch section |
+
+#### Video (`static/videos/`)
+
+| File | Usage |
+| ---- | ----- |
+| `lifewaveintrovideo.mp4` | Intro video on the Education (Blog) page, tracked via Git LFS |
 
 ### Code
 
@@ -261,7 +274,7 @@ DATABASE_URL= availble if required
 
 ---
 
-## Reflection 
+## Reflection
 
 This project significantly improved my understanding of **full-stack Django development**, particularly in areas such as database design, authentication, deployment, and accessibility.
 
@@ -284,17 +297,15 @@ Each challenge was overcome through structured debugging, documentation review, 
 
 ### Reflections on Use of AI
 
-* AI tools were used to:
+AI tools were used to:
 
 * Diagnose and fix deployment issues (HTTP 500 errors)
-
 * Debug Django configuration problems
-
 * Generate future feature ideas
-
 * Improve understanding of Django architecture
-* .  Copilot helped identfied a whole suite of tests that could be carried on my project. However I only asked Copilot to focus on testimonais and CRUD functionality that has complex operations
-*  AI also helped with efficiency and productivity as I was able to catch up with the work, since I wqs ill for two weeks with covid
+* Copilot helped identify a whole suite of tests that could be carried on my project. However I only asked Copilot to focus on testimonials and CRUD functionality that has complex operations
+* AI also helped with efficiency and productivity as I was able to catch up with the work, since I was ill for two weeks with covid
+
 ### Outcome
 
 The final application meets the project requirements, follows industry best practices, and provides a solid foundation for future expansion.
@@ -303,10 +314,4 @@ The final application meets the project requirements, follows industry best prac
 
 ## Final Validation Statement
 
- Due to the use of Django Template Language (DTL), HTML validation was performed using the W3C Markup Validation Service via the deployed application URLs to validate fully rendered HTML output.
-
----
-
-
-
-
+Due to the use of Django Template Language (DTL), HTML validation was performed using the W3C Markup Validation Service via the deployed application URLs to validate fully rendered HTML output.
