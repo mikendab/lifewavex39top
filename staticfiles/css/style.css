@@ -1,0 +1,131 @@
+.hero {
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-image {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.65));
+}
+
+.hero-content {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 1rem;
+  color: #fff;
+  z-index: 1;
+}
+
+.hero-inner {
+  max-width: 760px;
+}
+
+.hero-title {
+  font-size: 1.6rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  margin: 0;
+  text-shadow: 0 2px 16px rgba(0, 0, 0, 0.55);
+}
+
+.hero-subtitle {
+  font-size: 1rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0;
+  max-width: 46ch;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.5);
+}
+
+.hero-cta {
+  display: inline-block;
+  margin-top: 1.1rem;
+  background: #f4c95d;
+  color: #1b1b1b;
+  text-decoration: none;
+  font-weight: 700;
+  padding: 0.65rem 1.2rem;
+  border-radius: 999px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.hero-cta:hover,
+.hero-cta:focus {
+  color: #1b1b1b;
+  transform: translateY(-1px);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.35);
+}
+
+.hero-actions {
+  margin-top: 1.1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.65rem;
+}
+
+.hero-cta-secondary {
+  background: transparent;
+  color: #fff;
+  border: 2px solid rgba(255, 255, 255, 0.8);
+  box-shadow: none;
+}
+
+.hero-cta-secondary:hover,
+.hero-cta-secondary:focus {
+  color: #fff;
+  border-color: #fff;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.35);
+}
+
+@media (min-width: 768px) {
+  .hero-image {
+    height: 420px;
+  }
+
+  .hero-content {
+    justify-content: flex-start;
+    text-align: left;
+    padding: 2rem 3.5rem;
+  }
+
+  .hero-title {
+    font-size: 2.4rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1.1rem;
+  }
+
+  .hero-actions {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  .hero-cta {
+    margin-top: 0;
+  }
+}
+
+@media (min-width: 1200px) {
+  .hero-image {
+    height: 540px;
+  }
+
+  .hero-title {
+    font-size: 3rem;
+  }
+}
