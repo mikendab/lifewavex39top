@@ -12,9 +12,9 @@
   <div class="container">
     <a class="navbar-brand" href="{% url 'home' %}">Lifewave X39</a>
     <ul class="navbar-nav ms-auto">
-      <li><a class="nav-link" href="{% url 'home' %}">Home</a></li>
-      <li><a class="nav-link" href="{% url 'blog_list' %}">Education</a></li>
-      <li><a class="nav-link" href="/testimonials/">Testimonials</a></li>
+      <li><a class="nav-link{% if request.path == '/' %} active fw-semibold{% endif %}" href="{% url 'home' %}">Home</a></li>
+      <li><a class="nav-link{% if request.path|slice:':6' == '/blog/' %} active fw-semibold{% endif %}" href="{% url 'blog_list' %}">Education</a></li>
+      <li><a class="nav-link{% if request.path|slice:':14' == '/testimonials/' %} active fw-semibold{% endif %}" href="/testimonials/">Testimonials</a></li>
 
       {% if user.is_authenticated %}
         <li><a class="nav-link" href="/accounts/logout/">Logout</a></li>
@@ -35,7 +35,7 @@
       <p class="hero-subtitle">Discover the Lifewave X39 patch and explore how light-based wellness technology can support your daily vitality.</p>
       <div class="hero-actions">
         <a href="{% url 'blog_list' %}" class="hero-cta">Learn More</a>
-        <a href="/testimonials/" class="hero-cta hero-cta-secondary">Read Testimonials</a>
+        <a href="{% url 'testimonial_list' %}" class="hero-cta hero-cta-secondary">Read Testimonials</a>
       </div>
     </div>
   </div>
