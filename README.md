@@ -209,7 +209,7 @@ The project was deployed to **Heroku** using the following steps:
 
 ```bash
 git clone https://github.com/mikendab/lifewavex39top.git
-cd your-repo-name
+cd lifewavex39top
 python -m venv venv
 source venv/bin/activate  # Windows: venv\Scripts\activate
 pip install -r requirements.txt
@@ -220,8 +220,8 @@ python manage.py runserver
 Create an `env.py` file with:
 
 ```python
-SECRET_KEY= available if required
-DATABASE_URL= availble if required
+SECRET_KEY=your-secret-key
+DATABASE_URL=your-database-url
 ```
 
 ---
