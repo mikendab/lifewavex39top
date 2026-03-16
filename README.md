@@ -203,6 +203,8 @@ The project was deployed to **Heroku** using the following steps:
 * Git
 * PostgreSQL (optional for local dev)
 
+> Compatibility note: On Python 3.14+, use the pinned `Pillow==12.1.1` in `requirements.txt`. Older Pillow pins (for example `11.0.0`) may fail to build on Windows.
+
 ### Steps
 
 ```bash
