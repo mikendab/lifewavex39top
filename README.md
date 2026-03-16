@@ -2,7 +2,7 @@
 
 > Django full stack project to market and distribute the lifewavex39 an innovative stem cell product for wellbeing.
 
-![Python](https://img.shields.io/badge/Python-3.12-blue?logo=python)
+![Python](https://img.shields.io/badge/Python-3.12--3.14-blue?logo=python)
 ![Django](https://img.shields.io/badge/Django-6.0-darkgreen?logo=django)
 ![Heroku](https://img.shields.io/badge/Deployed-Heroku-purple?logo=heroku)
 ![PostgreSQL](https://img.shields.io/badge/Database-PostgreSQL-blue?logo=postgresql)
