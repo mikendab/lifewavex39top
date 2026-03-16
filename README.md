@@ -259,7 +259,7 @@ DATABASE_URL= availble if required
 | `benefitsofx39.png` | Education page — Benefits of X39 section |
 | `howtwearthex39.png` | Education page — How to Wear the X39 section |
 | `howx39works.png` | Education page — How X39 Works section |
-| `whythex39stemcellpatch.png` | Education page — Why the X39 Stem Cell Patch section |
+| `whyx39stemcellactivationpatch.png` | Education page — Why the X39 Stem Cell Activation Patch section |
 
 #### Video (`static/videos/`)
 
