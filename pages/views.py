@@ -1,9 +1,9 @@
 from django.shortcuts import render
-
-# Create your views here.
 from blog.models import Post
 from testimonials.models import Testimonial
-from django.shortcuts import render
+
+# Create your views here.
+
 
 def home(request):
     blogs = Post.objects.filter(published=True)[:3]
